@@ -1,0 +1,24 @@
+@MyCatalog_HostAddress = http://localhost:5073
+@AdminToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImpidCIsInN1YiI6ImpidCIsImp0aSI6IjZhZDM5ZDkwIiwicm9sZSI6ImFkbWluIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NjQzMDEiLCJodHRwczovL2xvY2FsaG9zdDo0NDM3MCIsImh0dHA6Ly9sb2NhbGhvc3Q6NTA3MyIsImh0dHBzOi8vbG9jYWxob3N0OjcwODYiXSwibmJmIjoxNzA0ODgxMzExLCJleHAiOjE3MTI3NDM3MTEsImlhdCI6MTcwNDg4MTMxMiwiaXNzIjoiZG90bmV0LXVzZXItand0cyJ9.V64Tzw9WNe0zwJmOijkd2KJJxMKPvzmdtwbBu7NfhVc
+GET {{MyCatalog_HostAddress}}/products
+
+###
+
+POST {{MyCatalog_HostAddress}}/products
+Content-Type: application/json
+Authorization: Bearer {{AdminToken}}
+
+{
+    "name": "Product 6",
+    "description": "Product 6 description",
+    "price": 450
+}
+###
+
+GET {{MyCatalog_HostAddress}}/products/test
+Authorization: Bearer {{AdminToken}}
+###
+
+GET {{MyCatalog_HostAddress}}/pathTest
+
+###
